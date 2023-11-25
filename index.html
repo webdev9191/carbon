@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main">
+        <div class="calculator_container">
+            <div class="calculator_image">
+                <image src="images/nature2.jpg" class="calc_image"></image>
+            </div>
+            <div class="calculator">
+                <div class="que_container">
+                    <button class="Q1"></button>
+                    <button class="Q1"></button>
+                    <button class="Q1"></button>
+                    <button class="Q1"></button>
+                    <button class="Q1"></button>
+                    <button class="Q1"></button>                    
+                </div>
+                <div class="calculator_layout">
+                    <div class="question_container">
+                            <label class="question">How many cars does your household use?</label>
+                            <div class="options">
+                            <div class="button-group">
+                                <button onclick="chooseAnswer('car', '0')" class="btn1"><p class="p2">None</p></button>
+                                <button onclick="chooseAnswer('car', '1')" class="btn1"><p class="p2">1 car</p></button>
+                                <button onclick="chooseAnswer('car', '2')" class="btn1"><p class="p2">2 car</p></button>
+                                <button onclick="chooseAnswer('car', '3')" class="btn1"><p class="p2">3 car</p></button>
+                                <p id="warn1" class="warn">Choose answer from above</p>
+                            </div>
+                        </div>
+                        <label class="question">How many short flights do you take each year?</label>
+                        <div class="options">
+                            <div class="button-group">
+                                <button onclick="chooseAnswer('long-flight', '0')" class="btn1"><p class="p2">None</p></button>
+                                <button onclick="chooseAnswer('long-flight', '4')" class="btn1"><p class="p2">4 roundtrips</p></button>
+                                <button onclick="chooseAnswer('long-flight', '12')" class="btn1"><p class="p2">12 roundtrips</p></button>
+                                <input data-value="long-flight" class="btn1 customInput" type="number" placeholder="Type quantity...">
+                            </div>
+                        </div>
+                        <label class="question">How else do you get around?</label>
+                        <div class="options">
+                            <div class="button-group">
+                                <button onclick="chooseAnswer('else', 'bus')" class="btn1"><p class="p2">Bus</p></button>
+                                <button onclick="chooseAnswer('else', 'transit')" class="btn1"><p class="p2">Transit Rail</p></button>
+                                <button onclick="chooseAnswer('else', 'rail')" class="btn1"><p class="p2">Inter City Rail</p></button>
+                                <button onclick="chooseAnswer('else', '0')" class="btn1"><p class="p2">Bike or Walk</p></button>
+                                <p id="warn2" class="warn">Choose answer from above</p>
+                            </div>
+                        </div>
+                        <label class="question">How much do you travel by bus each week?</label>
+                        <div class="options">
+                            <div class="button-group">
+                                <button onclick="chooseAnswer('bus', '3')" class="btn1"><p class="p2">Rarely</p></button>
+                                <button onclick="chooseAnswer('bus', '7')" class="btn1"><p class="p2">Daily commute</p></button>
+                                <button onclick="chooseAnswer('bus', '10')" class="btn1"><p class="p2">Always</p></button>
+                                <input data-value="bus" class="btn1 customInput" type="number" placeholder="Type quantity...">
+                            </div>
+                        </div>
+                        <label class="question">How much do you travel by transit rail each week?</label>
+                        <div class="options">
+                            <div class="button-group">
+                                <button onclick="chooseAnswer('transit-rail', '3')" class="btn1"><p class="p2">Rarely</p></button>
+                                <button onclick="chooseAnswer('transit-rail', '7')" class="btn1"><p class="p2">Daily commute</p></button>
+                                <button onclick="chooseAnswer('transit-rail', '10')" class="btn1"><p class="p2">Always</p></button>
+                                <input data-value="transit-rail" class="btn1 customInput" type="number" placeholder="Type a number">
+                            </div>
+                        </div>
+                        <label class="question">How much do you travel by inter city rail each year?</label>
+                        <div class="options">
+                            <div class="button-group">
+                                <button onclick="chooseAnswer('city-rail', '5', true)" class="btn1"><p class="p2">A few short trips a year</p></button>
+                                <button onclick="chooseAnswer('city-rail', '15', true)" class="btn1"><p class="p2">Between cities often</p></button>
+                                <button onclick="chooseAnswer('city-rail', '35', true)" class="btn1"><p class="p2">Many long trips a year</p></button>
+                                <input data-value="city-rail" class="btn1 customInput" type="number" placeholder="Type a quantity">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="navigation">
+                        <button class="prev">Previous</button>
+                        <button class="next">Next</button>
+                        <button onclick="chooseAnswer('city-rail', 'custom', true)" class="submit-button" style="display: none;" url="index.html">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main1">
+        <div class="body1">
+            <image src="images/image33.png" alt="SURATIIIII" class="pic1"></image>
+            <div class="text_container">
+                <h1>How Transportation Affects Our Planet</h1>
+                <h3>What Happens When We Travel?</h3>
+                <p>When we drive, fly, or use other transportation methods, we release gases like carbon dioxide into the air. These gases trap heat, causing climate change and harming our environment.</p>
+                <a class="link_a" href="#top" id="scrollToTopLink">Calculate now ➔</a>
+            </div>
+        </div>
+        <div class="body2">
+            <div class="text_container">
+                <h1>How Our Calculator Helps You</h1>
+                <h3>Find Out Your Travel Impact Easily</h3>
+                <p>Our calculator makes it simple to see how your travel choices affect the environment. Just enter details like how far you travel and what type of transport you use.</p>
+                <a class="link_a" href="#top" id="scrollToTopLink1">Calculate now ➔</a>
+            </div>
+            <image src="images/image44.png" alt="SURATIIIII" class="pic1"></image>
+        </div>
+        <h1 class="feed_header">What Do People Say About Us</h1>
+        <div class="feed_container">
+            <div class="user1">
+                <div class="profile">
+                    <div class="rate2">
+                        <img src="images/profile_picture1.png" alt="SURATIIIIIIIIIII" class="user_profile"></img>
+                        <p class="user_desc">I love how user-friendly the carbon emission calculator is! It's an eye-opener, showing the real impact of my daily commute. Great initiative!</p>
+                    </div>
+                    <div class="rate">
+                        <p class="user_name">Sarah M. - Environmental Advocate</p>
+                        <div class="rate1">
+                            <p class="user_rating">★★★★★</p>
+                            <p class="rate_number">4.9 Rating</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="user1">
+                <div class="profile">
+                    <div class="rate2">
+                        <img src="images/profile_picture2.png" alt="SURATIIIIIIIIIII" class="user_profile"></img>
+                        <p class="user_desc">Rollycks' carbon calculator helped me realize the impact of my travel choices. Simple to use and informative. Keep up the good work!</p>
+                    </div>
+                    <div class="rate">
+                        <p class="user_name">Mark T. - Sustainable Traveler</p>
+                        <div class="rate1">
+                            <p class="user_rating">★★★★★</p>
+                            <p class="rate_number">4.9 Rating</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="user1">
+                <div class="profile">
+                    <div class="rate2">
+                        <img src="images/profile_picture3.png" alt="SURATIIIIIIIIIII" class="user_profile"></img>
+                        <p class="user_desc">As a parent, I'm concerned about the future. This tool made me aware of our family's carbon footprint and motivated us to consider greener transportation options.</p>
+                    </div>
+                    <div class="rate">
+                        <p class="user_name">Emily R. - Eco-conscious Parent</p>
+                        <div class="rate1">
+                            <p class="user_rating">★★★★★</p>
+                            <p class="rate_number">4.9 Rating</p>
+                        </div>
+                    </div>
+                </div> 
+            </div>    
+        </div>
+    </div>
+</div>
+    <script src="/script.js"></script>
+    <!-- <script src="/zura.js"></script> -->
+</body>
+</html>
