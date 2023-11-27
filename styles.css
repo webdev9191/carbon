@@ -162,7 +162,7 @@ body{
     left: 2vw;
     display: flex;
     align-items: center;
-    font-size: 1.4rem;
+    font-size: 1.5vw;
 }
 .next {
     color: #131313;
@@ -370,8 +370,11 @@ body{
     }
     .btn1{
         width: 94vw;
-        height: 6vw;
-        font-size: 2vw;
+        height: 9vw;
+        font-size: 0.5vw;
+    }
+    .p2{
+        font-size: 2.75vw;
     }
 /*------------------------------------------------*/
     .main1{
